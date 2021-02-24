@@ -9,12 +9,8 @@ Link:
 
 # Previews:
 
+Desktop / Tablet:
+<img src="Website Previews/desktop.png">
+<hr>
+Mobile:
 <img src="Website Previews/mobile.png">
-<hr>
-<img src="Website Previews/desktop2.png">
-<hr>
-<img src="Website Previews/desktop3.png">
-<hr>
-<img src="Website Previews/tablet1.png">
-<hr>
-<img src="Website Previews/tablet2.png">
