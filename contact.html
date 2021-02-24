@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Designo Agency</title>
+  </head>
+  <body>
+    <div class="website">
+      <div class="nav">
+        <div class="nav-content">
+          <a href="/index.html"
+            ><img
+              src="/assets/shared/desktop/logo-dark.png"
+              alt="logo"
+              class="logo"
+          /></a>
+          <img
+            src="/assets/shared/mobile/icon-hamburger.svg"
+            alt="burguer"
+            class="burguer"
+            id="burguer"
+          />
+          <img
+            src="/assets/shared/mobile/icon-close.svg"
+            alt="close-burguer"
+            class="close-burguer"
+            id="close-burguer"
+          />
+          <div class="nav-items">
+            <h4><a href="/about.html">Our Company</a></h4>
+            <h4><a href="/locations.html">Locations</a></h4>
+            <h4><a href="/contact.html">Contact</a></h4>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-nav-dropdown hide" id="mobile-nav-dropdown">
+        <div class="nav-text">
+          <h4><a href="/about.html">Our company</a></h4>
+          <h4><a href="/locations.html">Locations</a></h4>
+          <h4><a href="/contact.html">Contact</a></h4>
+        </div>
+      </div>
+      <div class="contact-html">
+        <div class="background-1"></div>
+        <div class="background-2"></div>
+        <div class="wrapper1">
+          <div class="email-error">
+            <h4>Invalid Email</h4>
+            <img src="/assets/contact/desktop/icon-error.svg" alt="error" />
+          </div>
+          <div class="phone-error">
+            <h4>Invalid Phone Number</h4>
+            <img src="/assets/contact/desktop/icon-error.svg" alt="error" />
+          </div>
+          <div class="error-msg error1">
+            <h4>Can't be empty</h4>
+            <img src="/assets/contact/desktop/icon-error.svg" alt="error" />
+          </div>
+          <div class="error-msg error2">
+            <h4>Can't be empty</h4>
+            <img src="/assets/contact/desktop/icon-error.svg" alt="error" />
+          </div>
+          <div class="error-msg error3">
+            <h4>Can't be empty</h4>
+            <img src="/assets/contact/desktop/icon-error.svg" alt="error" />
+          </div>
+          <div class="error-msg error4">
+            <h4>Can't be empty</h4>
+            <img src="/assets/contact/desktop/icon-error.svg" alt="error" />
+          </div>
+          <div class="text">
+            <h1>Contact us</h1>
+            <h5>
+              Ready to take it to the next level? Let’s talk about your project
+              or idea and find out how we can help your business grow. If you
+              are looking for unique digital experiences that’s relatable to
+              your users, drop us a line.
+            </h5>
+          </div>
+          <!-- to connect the backend with PHP we would do the following:  <form action="/contact.php" method="POST"> -->
+          <form>
+            <div class="wrapper">
+              <input
+                autocomplete="off"
+                type="text"
+                name="name"
+                placeholder="Name"
+                maxlength="43"
+              />
+              <hr />
+            </div>
+            <div class="wrapper">
+              <input
+                autocomplete="off"
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                maxlength="43"
+              />
+              <hr />
+            </div>
+            <div class="wrapper">
+              <input autocomplete="off"type="text" name="phone"
+              placeholder="Phone" / maxlength="9">
+              <hr />
+            </div>
+            <div class="wrapper">
+              <textarea
+                autocomplete="off"
+                name="message"
+                placeholder="Your Message"
+              ></textarea>
+              <hr />
+            </div>
+            <input type="button" value="Submit" class="submit" />
+            <div class="success hide">
+              <h5>Thank you for getting in touch!</h5>
+              <img src="/assets/shared/desktop/success-form.png" alt="" />
+            </div>
+          </form>
+        </div>
+
+        <div class="images">
+          <div class="box">
+            <img
+              src="/assets/shared/desktop/illustration-canada.png"
+              alt="canada"
+            />
+            <h2>Canada</h2>
+            <button onclick="location.href='/locations.html'" type="button">
+              See location
+            </button>
+          </div>
+          <div class="box">
+            <img
+              src="/assets/shared/desktop/iillustration-australia.png"
+              alt="australia"
+            />
+            <h2>Australia</h2>
+            <button onclick="location.href='/locations.html'" type="button">
+              See location
+            </button>
+          </div>
+          <div class="box">
+            <img
+              src="/assets/shared/desktop/illustration-united-kingdom.png"
+              alt="uk"
+            />
+            <h2>United Kingdom</h2>
+            <button onclick="location.href='/locations.html'" type="button">
+              See location
+            </button>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="container1">
+            <a href="/index.html"
+              ><img
+                src="/assets/shared/desktop/logo-light.png"
+                alt="logo-footer"
+                class="logo"
+            /></a>
+            <hr class="mobile" />
+            <div class="text">
+              <h3><a href="/about.html">Our Company</a></h3>
+              <h3><a href="/locations.html">Locations</a></h3>
+              <h3><a href="/contact.html">Contact</a></h3>
+            </div>
+          </div>
+          <div class="container2">
+            <div class="text1">
+              <h4>Designo Central Office</h4>
+              <h5>3886 Wellington Street</h5>
+              <h5>Toronto, Ontario M9C 3J5</h5>
+            </div>
+            <div class="text2">
+              <h4>Contact Us (Central Office)</h4>
+              <h5>P : +1 253-863-8967</h5>
+              <h5>M : contact@designo.co</h5>
+            </div>
+            <div class="social">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img
+                  src="/assets/shared/desktop/icon-facebook.svg"
+                  alt="icon-facebook"
+              /></a>
+              <a href="https://www.youtube.com/" target="_blank">
+                <img
+                  src="/assets/shared/desktop/icon-youtube.svg"
+                  alt="icon-youtube"
+                />
+              </a>
+              <a href="https://www.twitter.com/" target="_blank">
+                <img
+                  src="/assets/shared/desktop/icon-twitter.svg"
+                  alt="icon-twitter"
+              /></a>
+              <a href="https://www.pinterest.com/" target="_blank">
+                <img
+                  src="/assets/shared/desktop/icon-pinterest.svg"
+                  alt="icon-pinterest"
+              /></a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img
+                  src="/assets/shared/desktop/icon-instagram.svg"
+                  alt="icon-instagram"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/contact.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

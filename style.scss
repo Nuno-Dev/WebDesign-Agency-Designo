@@ -1,0 +1,3196 @@
+//TAKE THIS OFF!!! (and classes 'red' (ctrl F2 to select all) in all html files when project is completed).
+.red {
+  border: 1px red solid;
+}
+
+//--------------------------------------
+//--------------------------------------
+//
+//          GLOBAL STYLES
+//
+//--------------------------------------
+//--------------------------------------
+
+:root {
+  font-family: 'Jost', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.website {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  overflow: scroll;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: 'Jost';
+  cursor: pointer;
+  &:hover {
+    background: #ffad9b !important;
+    color: white !important;
+  }
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.fixed_position {
+  position: fixed;
+}
+
+input[type='text'],
+textarea {
+  font-family: 'Jost';
+  color: white;
+}
+
+//--------------------------------------
+//--------------------------------------
+//
+//          MOBILE STYLES
+//
+//--------------------------------------
+//--------------------------------------
+
+//--------------------------
+//--------------------------
+// general STYLES
+//-------------------------
+//--------------------------
+.nav {
+  height: 96px;
+  width: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  .nav-content {
+    width: 327px;
+    height: 27px;
+    position: relative;
+    align-items: center;
+    .logo {
+      width: 202px;
+      float: left;
+    }
+    .burguer {
+      width: 24px;
+      float: right;
+      margin-top: 2px;
+      &:active {
+        transform: rotate(180deg);
+        transition: all 0.1s;
+      }
+    }
+    .close-burguer {
+      display: none;
+      float: right;
+      &:active {
+        transform: rotate(-180deg);
+        transition: all 0.1s;
+      }
+    }
+    .nav-items {
+      display: none;
+      float: right;
+    }
+  }
+}
+
+//mobile nav dropdown (burguer button)
+.mobile-nav-dropdown {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, #1d1c1e 55.94%);
+  align-items: center;
+  width: 375px;
+  height: 600px;
+  justify-content: center;
+  text-align: left;
+  position: absolute;
+  top: 95px;
+  z-index: 20;
+  .nav-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 24px;
+    z-index: 90;
+    width: 375px;
+    height: 235px;
+    background: #1d1c1e;
+    h4 {
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 2px;
+      font-family: 'Jost';
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+}
+
+.error-msg,
+.email-error,
+.phone-error {
+  display: none;
+  flex-direction: row;
+  font-style: italic;
+  z-index: 50;
+  align-items: center;
+  h4 {
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    line-height: 26px;
+  }
+  img {
+    margin-left: 9px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.phone-error {
+  position: absolute;
+  margin-left: 180px;
+  top: 529px;
+}
+
+.email-error {
+  position: absolute;
+  margin-left: 225px;
+  top: 467px;
+}
+
+.error1 {
+  position: absolute;
+  margin-left: 210px;
+  top: 405px;
+}
+.error2 {
+  position: absolute;
+  margin-left: 210px;
+  top: 467px;
+}
+.error3 {
+  position: absolute;
+  margin-left: 210px;
+  top: 529px;
+}
+.error4 {
+  position: absolute;
+  margin-left: 210px;
+  top: 595px;
+}
+
+.success {
+  position: absolute;
+  top: 810px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+}
+
+.talk {
+  z-index: 10;
+  position: absolute;
+  width: 327px;
+  height: 379px;
+  top: 3494px;
+  background: url('/assets/home/mobile/background_talk.png');
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 64px 24px;
+  align-items: center;
+  h1 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  button {
+    width: 152px;
+    height: 56px;
+    background: #ffffff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333136;
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 815px;
+  top: 3684px;
+  background: #1d1c1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h3 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    &:hover {
+      text-decoration-line: underline !important;
+    }
+  }
+  h4,
+  h5 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  h4 {
+    font-weight: bold;
+  }
+  .logo {
+    width: 202px;
+    margin-top: 253px;
+    margin-bottom: 32px;
+  }
+  hr {
+    width: 327px;
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    height: 1px;
+    border: none;
+    margin-bottom: 32px;
+  }
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 9px;
+    text-align: center;
+    align-items: center;
+  }
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    .text1 {
+      margin-bottom: 38px;
+    }
+    .text2 {
+      margin-bottom: 41px;
+    }
+  }
+  .social {
+    img {
+      margin: 0 6px;
+      &:hover {
+        filter: brightness(1.5) !important;
+        cursor: pointer !important;
+      }
+    }
+  }
+}
+
+//--------------------------
+//--------------------------
+// index-html STYLES
+//-------------------------
+//--------------------------
+
+.index-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .intro {
+    height: 843px;
+    width: 375px;
+    background: #e7816b;
+    position: relative;
+    overflow: hidden;
+    .bk-oval {
+      margin-top: 102px;
+      left: calc(50% - 640px / 2 + 772.5px);
+      top: calc(50% - 640px / 2 + 640.5px);
+    }
+    .content {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 3;
+      align-items: center;
+      position: absolute;
+      width: 327px;
+      height: 312px;
+      left: 24px;
+      top: 80px;
+      text-align: center;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #ffffff;
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+      button {
+        background: #ffffff;
+        border-radius: 8px;
+        width: 152px;
+        height: 56px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: 1px;
+        color: #333136;
+      }
+    }
+    img {
+      position: absolute;
+      width: 374px;
+      left: 46px;
+      height: auto;
+      top: 353px;
+    }
+  }
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 327px;
+    height: 798px;
+    top: 1059px;
+    .text {
+      z-index: 15;
+      border-radius: 15px;
+      width: 326px;
+      height: 250px;
+    }
+    .box {
+      cursor: pointer;
+      &:hover {
+        .text {
+          background-color: rgba(231, 129, 107, 0.4);
+          border: 1px #e7816b solid;
+        }
+      }
+      width: 326px;
+      height: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      text-align: center;
+      h2 {
+        margin-top: 90px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1.4px;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 16px;
+      }
+      .view {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 4px;
+          height: 8px;
+        }
+      }
+    }
+    .container1 {
+      .web {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/mobile/image-web-design.jpg');
+        background-size: cover;
+      }
+    }
+    .container2 {
+      display: flex;
+      flex-direction: column;
+      .app {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/mobile/image-app-design.jpg');
+        background-size: cover;
+      }
+      .graphic {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/mobile/image-graphic-design.jpg');
+        background-size: cover;
+      }
+    }
+  }
+  .points {
+    position: absolute;
+    width: 327px;
+    height: 1396px;
+    top: 1977px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 5px;
+      color: #333136;
+      text-transform: uppercase;
+      margin-top: 42px;
+      margin-bottom: 32px;
+    }
+    h4 {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #333136;
+    }
+    .container {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+//--------------------------
+//--------------------------
+// webdesign-html STYLES
+//-------------------------
+//--------------------------
+
+.webdesign-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .intro {
+    background: url('/assets/web-design/desktop/intro_bk.png');
+    width: 375px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      width: 327px;
+      height: 110px;
+      text-align: center;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #ffffff;
+        margin-top: 106px;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+    }
+  }
+  .wrapper {
+    position: absolute;
+    width: 327px;
+    height: 3068px;
+    top: 512px;
+    .box-container1,
+    .box-container2 {
+      display: flex;
+      flex-direction: column;
+    }
+    .box {
+      &:hover {
+        background: #e7816b;
+        h3,
+        h5 {
+          color: #fff;
+        }
+      }
+      overflow: hidden;
+      width: 327px;
+      height: 478px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      background: #fdf3f0;
+      border-radius: 15px;
+      text-align: center;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 5px;
+      color: #e7816b;
+      text-transform: uppercase;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+    h5 {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #333136;
+      padding: 0 30px;
+    }
+    .img {
+      width: 327px;
+      height: 320px;
+      border-radius: 15px 15px 0px 0px;
+    }
+    .img1 {
+      background: url('/assets/web-design/desktop/image-express.jpg');
+      background-size: cover;
+    }
+    .img2 {
+      background: url('/assets/web-design/desktop/image-transfer.jpg');
+      background-size: cover;
+    }
+    .img3 {
+      background: url('/assets/web-design/desktop/image-photon.jpg');
+      background-size: cover;
+    }
+    .img4 {
+      background: url('/assets/web-design/desktop/image-builder.jpg');
+      background-size: cover;
+    }
+    .img5 {
+      background: url('/assets/web-design/desktop/image-blogr.jpg');
+      background-size: cover;
+    }
+    .img6 {
+      background: url('/assets/web-design/desktop/image-camp.jpg');
+      background-size: cover;
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 327px;
+    height: 524px;
+    top: 3676px;
+    .text {
+      z-index: 15;
+      border-radius: 15px;
+      width: 326px;
+      height: 250px;
+    }
+    .box {
+      cursor: pointer;
+      &:hover {
+        .text {
+          background-color: rgba(231, 129, 107, 0.4);
+          border: 1px #e7816b solid;
+        }
+      }
+      width: 327px;
+      height: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 0;
+      border-radius: 15px;
+      text-align: center;
+      h2 {
+        margin-top: 90px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1.4px;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 16px;
+      }
+      .view {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 4px;
+          height: 8px;
+        }
+      }
+    }
+    .app {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/home/mobile/image-app-design.jpg');
+      background-size: cover;
+    }
+    .graphic {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/home/mobile/image-graphic-design.jpg');
+      background-size: cover;
+      margin-top: 24px;
+    }
+  }
+  .talk {
+    top: 4296px;
+  }
+  .footer {
+    top: 4486px;
+  }
+}
+
+//--------------------------
+//--------------------------
+// appdesign-html STYLES
+//-------------------------
+//--------------------------
+
+.appdesign-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .intro {
+    background: url('/assets/web-design/desktop/intro_bk.png');
+    width: 375px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      width: 327px;
+      height: 110px;
+      text-align: center;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #ffffff;
+        margin-top: 106px;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+    }
+  }
+  .wrapper {
+    position: absolute;
+    width: 327px;
+    height: 2550px;
+    top: 512px;
+    .box-container1,
+    .box-container2 {
+      display: flex;
+      flex-direction: column;
+    }
+    .box {
+      &:hover {
+        background: #e7816b;
+        h3,
+        h5 {
+          color: #fff;
+        }
+      }
+      overflow: hidden;
+      width: 327px;
+      height: 478px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      background: #fdf3f0;
+      border-radius: 15px;
+      text-align: center;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 5px;
+      color: #e7816b;
+      text-transform: uppercase;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+    h5 {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #333136;
+      padding: 0 30px;
+    }
+    .img {
+      width: 327px;
+      height: 320px;
+      border-radius: 15px 15px 0px 0px;
+    }
+    .img1 {
+      background: url('/assets/app-design/desktop/image-airfilter.jpg');
+      background-size: cover;
+    }
+    .img2 {
+      background: url('/assets/app-design/desktop/image-eyecam.jpg');
+      background-size: cover;
+    }
+    .img3 {
+      background: url('/assets/app-design/desktop/image-faceit.jpg');
+      background-size: cover;
+    }
+    .img4 {
+      background: url('/assets/app-design/desktop/image-todo.jpg');
+      background-size: cover;
+    }
+    .img5 {
+      background: url('/assets/app-design/desktop/image-loopstudios.jpg');
+      background-size: cover;
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 327px;
+    height: 524px;
+    top: 3158px;
+    .text {
+      z-index: 15;
+      border-radius: 15px;
+      width: 327px;
+      height: 250px;
+    }
+    .box {
+      cursor: pointer;
+      &:hover {
+        .text {
+          background-color: rgba(231, 129, 107, 0.4);
+          border: 1px #e7816b solid;
+        }
+      }
+      width: 327px;
+      height: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 0;
+      border-radius: 15px;
+      text-align: center;
+      h2 {
+        margin-top: 90px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1.4px;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 16px;
+      }
+      .view {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 4px;
+          height: 8px;
+        }
+      }
+    }
+    .web {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/home/mobile/image-web-design.jpg');
+      background-size: cover;
+    }
+    .graphic {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/home/mobile/image-graphic-design.jpg');
+      background-size: cover;
+      margin-top: 24px;
+    }
+  }
+  .talk {
+    top: 3778px;
+  }
+  .footer {
+    top: 3968px;
+  }
+}
+
+//--------------------------
+//--------------------------
+// graphicdesign-html STYLES
+//-------------------------
+//--------------------------
+
+.graphicdesign-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .intro {
+    background: url('/assets/web-design/desktop/intro_bk.png');
+    width: 375px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      width: 327px;
+      height: 110px;
+      text-align: center;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #ffffff;
+        margin-top: 106px;
+        text-transform: capitalize;
+        margin-bottom: 24px;
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+    }
+  }
+  .wrapper {
+    position: absolute;
+    width: 327px;
+    height: 1514px;
+    top: 512px;
+    .box-container1 {
+      display: flex;
+      flex-direction: column;
+    }
+    .box {
+      &:hover {
+        background: #e7816b;
+        h3,
+        h5 {
+          color: #fff;
+        }
+      }
+      overflow: hidden;
+      width: 327px;
+      height: 478px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      background: #fdf3f0;
+      border-radius: 15px;
+      text-align: center;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 5px;
+      color: #e7816b;
+      text-transform: uppercase;
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+    h5 {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #333136;
+      padding: 0 30px;
+    }
+    .img {
+      width: 327px;
+      height: 320px;
+      border-radius: 15px 15px 0px 0px;
+    }
+    .img1 {
+      background: url('/assets/graphic-design/desktop/image-change.jpg');
+      background-size: cover;
+    }
+    .img2 {
+      background: url('/assets/graphic-design/desktop/image-boxed-water.jpg');
+      background-size: cover;
+    }
+    .img3 {
+      background: url('/assets/graphic-design/desktop/image-science.jpg');
+      background-size: cover;
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 327px;
+    height: 524px;
+    top: 2122px;
+    .text {
+      z-index: 15;
+      border-radius: 15px;
+      width: 327px;
+      height: 250px;
+    }
+    .box {
+      cursor: pointer;
+      &:hover {
+        .text {
+          background-color: rgba(231, 129, 107, 0.4);
+          border: 1px #e7816b solid;
+        }
+      }
+      width: 327px;
+      height: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 0;
+      border-radius: 15px;
+      text-align: center;
+      h2 {
+        margin-top: 90px;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 1.4px;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 16px;
+      }
+      .view {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 4px;
+          height: 8px;
+        }
+      }
+    }
+    .web {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/home/mobile/image-web-design.jpg');
+      background-size: cover;
+      margin-top: 24px;
+    }
+    .app {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('/assets/home/mobile/image-app-design.jpg');
+      background-size: cover;
+    }
+  }
+  .talk {
+    top: 2742px;
+  }
+  .footer {
+    top: 2932px;
+  }
+}
+
+//--------------------------
+//--------------------------
+// about-html STYLES
+//-------------------------
+//--------------------------
+
+.about-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .wrapper1 {
+    width: 375px;
+    height: 715px;
+    overflow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .about-img {
+      width: 375px;
+      height: 320px;
+      background: url('/assets/about/mobile/image-about-hero.jpg');
+      background-size: cover;
+    }
+    .text {
+      width: 375px;
+      height: 395px;
+      background: url(/assets/about/mobile/bk-container1.png);
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #ffffff;
+        margin-top: 80px;
+        margin-bottom: 25px;
+        text-transform: capitalize;
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+        padding: 0 20px;
+      }
+    }
+  }
+  .wrapper2 {
+    width: 375px;
+    height: 865px;
+    overflow: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: url(/assets/about/mobile/talent-bk.png);
+    margin-bottom: 120px;
+    .talent-img {
+      width: 375px;
+      height: 320px;
+      background: url('/assets/about/mobile/image-world-class-talent.jpg');
+      background-size: cover;
+    }
+    .text {
+      h1 {
+        margin-top: 80px;
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #e7816b;
+      }
+      h4 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #333136;
+        padding: 0 26px;
+      }
+    }
+  }
+  .images {
+    width: 350px;
+    height: 1188px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 120px;
+    .box {
+      h2 {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 5px;
+        color: #333136;
+        margin-top: 40px;
+        margin-bottom: 34px;
+      }
+      button {
+        width: 152px;
+        height: 56px;
+        background: #e7816b;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+    }
+  }
+  .wrapper3 {
+    width: 375px;
+    height: 865px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 120px;
+    background: url(/assets/about/mobile/talent-bk.png);
+    .real-img {
+      width: 375px;
+      height: 320px;
+      background: url('/assets/about/mobile/image-real-deal.jpg');
+      background-size: cover;
+    }
+    .text {
+      h2 {
+        margin-top: 80px;
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #e7816b;
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #333136;
+        padding: 0 26px;
+      }
+    }
+  }
+  .talk {
+    top: 4089px;
+  }
+  .footer {
+    top: 4279px;
+  }
+}
+
+//--------------------------
+//--------------------------
+// locations-html STYLES
+//-------------------------
+//--------------------------
+
+.locations-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .wrapper-maps {
+    width: 375px;
+    height: 2222px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    .box1,
+    .box2 {
+      width: 375px;
+      height: 714px;
+    }
+    .map {
+      width: 375px;
+      height: 320px;
+      z-index: 5;
+    }
+    .text {
+      padding-top: 80px;
+      width: 375px;
+      height: 394px;
+      background: url('/assets/locations/mobile/bk-map.svg');
+      background-size: cover;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #e7816b;
+        margin-bottom: 25px;
+      }
+      h4,
+      h5 {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #333136;
+      }
+      h4 {
+        font-weight: bold;
+      }
+    }
+  }
+  .talk {
+    top: 2438px;
+  }
+  .footer {
+    top: 2628px;
+  }
+}
+
+//--------------------------
+//--------------------------
+// contact-html STYLES
+//-------------------------
+//--------------------------
+
+.contact-html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  .wrapper1 {
+    width: 375px;
+    height: 764px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: url('/assets/contact/mobile/bk-contact.png');
+    margin-bottom: 120px;
+    .text {
+      text-align: center;
+      margin-bottom: 50px;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 36px;
+        color: #ffffff;
+        margin-top: 70px;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+      }
+      h5 {
+        padding: 0 20px;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+    }
+    form {
+      width: 327px;
+      height: 387px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus,
+      select:-webkit-autofill,
+      select:-webkit-autofill:hover,
+      select:-webkit-autofill:focus {
+        border: none !important;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: white !important;
+        font-family: 'Jost';
+      }
+
+      hr {
+        width: 327px;
+        height: 1px;
+        border: none;
+        background-color: white;
+        margin: 7px 0 24px 0;
+      }
+      input {
+        height: 30px;
+        width: 325px;
+      }
+      textarea {
+        width: 325px;
+        height: 100px;
+        padding-top: 5px;
+        resize: none;
+      }
+      .wrapper {
+        &:hover,
+        &:active {
+          hr {
+            height: 2px;
+          }
+          input,
+          textarea {
+            &::placeholder {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      input,
+      textarea {
+        &:focus {
+          &::placeholder {
+            opacity: 1;
+          }
+        }
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        background: transparent;
+        line-height: normal;
+        &::placeholder {
+          font-family: 'Jost';
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          color: #fff;
+          mix-blend-mode: normal;
+          opacity: 0.5;
+          justify-content: center;
+        }
+      }
+      .submit {
+        border: none;
+        outline: none;
+        font-family: 'Jost';
+        cursor: pointer;
+        &:hover {
+          background: #ffad9b !important;
+          color: white !important;
+        }
+        margin-top: 11px;
+        width: 152px;
+        height: 56px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+        font-family: 'Jost';
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #333136;
+        background: #fff;
+        border-radius: 8px;
+      }
+    }
+  }
+  .images {
+    width: 350px;
+    height: 1188px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 120px;
+    .box {
+      h2 {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 5px;
+        color: #333136;
+        margin-top: 40px;
+        margin-bottom: 34px;
+      }
+      button {
+        width: 152px;
+        height: 56px;
+        background: #e7816b;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+    }
+  }
+  .talk {
+    display: none;
+  }
+  .footer {
+    top: 2288px;
+    height: 626px;
+    .logo {
+      margin-top: 65px;
+    }
+  }
+}
+
+//--------------------------------------
+//--------------------------------------
+//
+//          TABLET STYLES
+//
+//--------------------------------------
+//--------------------------------------
+
+@media screen and (min-width: 768px) {
+  //--------------------------
+  //--------------------------
+  // GENERAL STYLES
+  //-------------------------
+  //--------------------------
+  .nav {
+    height: 155px;
+    width: 768px;
+    .nav-content {
+      width: 689px;
+      height: 27px;
+      position: relative;
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 202px;
+        float: left;
+      }
+      .burguer {
+        display: none;
+      }
+      .close-burguer {
+        display: none;
+        float: right;
+      }
+      .nav-items {
+        display: flex;
+        width: 370px;
+        height: 14px;
+        justify-content: space-between;
+        margin-left: 115px;
+        h4 {
+          &:hover {
+            text-decoration-line: underline !important;
+          }
+          text-transform: uppercase;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 14px;
+          letter-spacing: 2px;
+          color: #333136;
+        }
+      }
+    }
+  }
+
+  .phone-error {
+    margin-left: 420px;
+    top: 549px;
+  }
+
+  .email-error {
+    margin-left: 465px;
+    top: 487px;
+  }
+
+  .error1 {
+    margin-left: 450px;
+    top: 425px;
+  }
+  .error2 {
+    margin-left: 450px;
+    top: 487px;
+  }
+  .error3 {
+    margin-left: 450px;
+    top: 549px;
+  }
+  .error4 {
+    margin-left: 450px;
+    top: 615px;
+  }
+
+  .success {
+    top: 820px;
+    margin-left: 420px;
+  }
+
+  .talk {
+    width: 690px;
+    height: 350px;
+    top: 2624px;
+    background: url('/assets/home/tablet/talk_bk.png');
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 0;
+    h1 {
+      margin-top: -8px;
+      padding: 0 190px;
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+    h4 {
+      padding: 0 100px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 35px;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 423px;
+    top: 2888px;
+    flex-direction: column;
+    text-align: left;
+    .logo {
+      width: 202px;
+      margin: 0;
+      margin-right: 70px;
+    }
+    hr {
+      position: absolute;
+      width: 690px;
+      top: 223px;
+      background: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.1;
+      height: 1px;
+      border: none;
+      margin-bottom: 32px;
+    }
+    .container1 {
+      width: 690px;
+      margin-top: 152px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 60px;
+      .text {
+        display: flex;
+        flex-direction: row;
+        height: 14px;
+        h3 {
+          margin-left: 40px;
+        }
+      }
+    }
+    .container2 {
+      width: 710px;
+      padding-left: 6px;
+      flex-direction: row;
+      .text1 {
+        margin-bottom: 0;
+        margin-right: 60px;
+      }
+      .text2 {
+        margin-bottom: 0;
+        h5 {
+          font-weight: bold;
+        }
+      }
+    }
+    .social {
+      margin-left: 67px;
+      margin-top: 55px;
+      img {
+        margin: 0 6px;
+      }
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // index-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .index-html {
+    .intro {
+      width: 689px;
+      height: 843px;
+      border-radius: 15px;
+      background: url('/assets/home/tablet/bk-oval.png');
+      .bk-oval {
+        display: none;
+      }
+      .content {
+        width: 573px;
+        height: 326px;
+        left: 57px;
+        top: 58px;
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin-bottom: 10px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          width: 420px;
+          font-weight: 300;
+        }
+      }
+      img {
+        width: 400px;
+        margin-left: 139px;
+        top: 335px;
+      }
+    }
+    .boxes {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 689px;
+      height: 649px;
+      top: 1118px;
+      .text {
+        width: 689px;
+        height: 200px;
+      }
+      .box {
+        width: 689px;
+        height: 200px;
+        h2 {
+          margin-top: 50px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 24px;
+        }
+        h4 {
+          margin-right: 15px;
+        }
+        .view {
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+      .container1 {
+        .web {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('/assets/home/tablet/image-web-design.jpg');
+        }
+      }
+      .container2 {
+        .app {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('/assets/home/tablet/image-app-design.jpg');
+        }
+        .graphic {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('/assets/home/tablet/image-graphic-design.jpg');
+        }
+      }
+    }
+    .points {
+      position: absolute;
+      width: 690px;
+      height: 670px;
+      top: 1887px;
+      h2 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 5px;
+        color: #333136;
+        text-transform: uppercase;
+        margin-top: 38px;
+        margin-bottom: 17px;
+      }
+      h4 {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #333136;
+      }
+      .container {
+        margin-bottom: 80px;
+        flex-direction: row;
+        display: flex;
+        text-align: left;
+        margin-bottom: 30px;
+        .text {
+          margin-bottom: 10px;
+          padding-left: 44px;
+        }
+      }
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // webdesign-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .webdesign-html {
+    .intro {
+      background: url('/assets/web-design/desktop/intro-bk-2.png');
+      width: 689px;
+      height: 252px;
+      .content {
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin-top: 66px;
+          margin-bottom: 22px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0 -40px;
+        }
+      }
+    }
+    .wrapper {
+      position: absolute;
+      width: 690px;
+      height: 2030px;
+      top: 527px;
+      .box-container1,
+      .box-container2 {
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        overflow: hidden;
+        width: 689px;
+        height: 310px;
+        margin-bottom: 34px;
+        display: flex;
+        flex-direction: row;
+        background: #fdf3f0;
+        border-radius: 15px;
+        text-align: center;
+      }
+      .text {
+        width: 350px;
+        height: 310px;
+        padding: 0 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      h5 {
+        padding: 0px;
+      }
+      .img {
+        width: 339px;
+        height: 310px;
+        border-radius: 15px 0px 0px 15px;
+      }
+    }
+    .projects {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 689px;
+      height: 424px;
+      top: 2677px;
+      .box {
+        width: 689px;
+        height: 200px;
+        .text {
+          width: 689px;
+          height: 310px;
+        }
+        h2 {
+          margin-top: 50px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 25px;
+        }
+        .view {
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    .talk {
+      top: 3221px;
+    }
+    .footer {
+      top: 3485px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // appdesign-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .appdesign-html {
+    .intro {
+      background: url('/assets/web-design/desktop/intro-bk-2.png');
+      width: 689px;
+      height: 252px;
+      .content {
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin-top: 66px;
+          margin-bottom: 22px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0 -40px;
+        }
+      }
+    }
+    .wrapper {
+      position: absolute;
+      width: 690px;
+      height: 2030px;
+      top: 527px;
+      .box-container1,
+      .box-container2 {
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        overflow: hidden;
+        width: 689px;
+        height: 310px;
+        margin-bottom: 34px;
+        display: flex;
+        flex-direction: row;
+        background: #fdf3f0;
+        border-radius: 15px;
+        text-align: center;
+      }
+      .text {
+        width: 350px;
+        height: 310px;
+        padding: 0 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      h5 {
+        padding: 0px;
+      }
+      .img {
+        width: 339px;
+        height: 310px;
+        border-radius: 15px 0px 0px 15px;
+      }
+    }
+    .projects {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 689px;
+      height: 424px;
+      top: 2335px;
+      .box {
+        .text {
+          width: 689px;
+          height: 200px;
+        }
+        width: 689px;
+        height: 200px;
+        h2 {
+          margin-top: 50px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 25px;
+        }
+        .view {
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    .talk {
+      top: 2879px;
+    }
+    .footer {
+      top: 3143px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // graphicdesign-html STYLES
+  //-------------------------
+  //--------------------------
+  .graphicdesign-html {
+    .intro {
+      background: url('/assets/web-design/desktop/intro-bk-2.png');
+      width: 689px;
+      height: 252px;
+      .content {
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin: 65px -20px 22px -20px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 0 -30px;
+        }
+      }
+    }
+    .wrapper {
+      position: absolute;
+      width: 690px;
+      height: 1004px;
+      top: 527px;
+      .box-container1 {
+        display: flex;
+        flex-direction: column;
+      }
+      .box {
+        overflow: hidden;
+        width: 689px;
+        height: 310px;
+        margin-bottom: 34px;
+        display: flex;
+        flex-direction: row;
+        background: #fdf3f0;
+        border-radius: 15px;
+        text-align: center;
+      }
+      .text {
+        width: 350px;
+        height: 310px;
+        padding: 0 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      h5 {
+        padding: 0px;
+      }
+      .img {
+        width: 339px;
+        height: 310px;
+        border-radius: 15px 0px 0px 15px;
+      }
+    }
+    .projects {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 689px;
+      height: 424px;
+      top: 1641px;
+      .box {
+        .text {
+          width: 689px;
+          height: 200px;
+        }
+        width: 689px;
+        height: 200px;
+        h2 {
+          margin-top: 50px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 25px;
+        }
+        .view {
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    .talk {
+      top: 2175px;
+    }
+    .footer {
+      top: 2439px;
+    }
+  }
+  //--------------------------
+  //--------------------------
+  // about-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .about-html {
+    .wrapper1 {
+      width: 689px;
+      height: 632px;
+      border-radius: 15px;
+      margin-bottom: 120px;
+      overflow: hidden;
+      background: url('/assets/about/tablet/bk-container1.png');
+      .about-img {
+        width: 689px;
+        height: 320px;
+        background: url('/assets/about/tablet/image-about-hero.jpg');
+      }
+      .text {
+        width: 689px;
+        height: 312px;
+        background: none;
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin-top: 70px;
+          margin-bottom: 35px;
+        }
+        h5 {
+          padding: 0 60px;
+        }
+      }
+    }
+    .wrapper2 {
+      border-radius: 15px;
+      overflow: hidden;
+      width: 689px;
+      height: 736px;
+      background: url('/assets/about/tablet/talent-bk.png');
+      margin-bottom: 125px;
+      .talent-img {
+        width: 689px;
+        height: 320px;
+        background: url('/assets/about/tablet/image-world-class-talent.jpg');
+      }
+      .text {
+        h1 {
+          margin-top: 75px;
+          font-size: 40px;
+          line-height: 48px;
+        }
+        h4 {
+          font-size: 16px;
+          line-height: 26px;
+          padding: 0 60px;
+        }
+      }
+    }
+    .images {
+      width: 350px;
+      height: 1230px;
+    }
+    .wrapper3 {
+      width: 689px;
+      height: 736px;
+      overflow: hidden;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 120px;
+      background: url(/assets/about/mobile/talent-bk.png);
+      .real-img {
+        width: 689px;
+        height: 320px;
+        background: url('/assets/about/tablet/image-real-deal.jpg');
+      }
+      .text {
+        h2 {
+          margin-top: 70px;
+          font-size: 40px;
+          line-height: 48px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          padding: 0 60px;
+        }
+      }
+    }
+    .talk {
+      top: 3976px;
+    }
+    .footer {
+      top: 4240px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // locations-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .locations-html {
+    .wrapper-maps {
+      width: 689px;
+      height: 2275px;
+      justify-content: space-between;
+      text-align: left;
+      .box1,
+      .box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 689px;
+        height: 683px;
+      }
+      .other {
+        display: flex;
+        flex-direction: row;
+        .sub {
+          margin-right: 120px;
+        }
+      }
+      .map {
+        border-radius: 15px;
+        width: 689px;
+        height: 326px;
+      }
+      .text {
+        padding: 87px 0 0 75px;
+        width: 689px;
+        height: 326px;
+        background: url('/assets/locations/tablet/bk-map.png');
+        background-size: cover;
+        border-radius: 15px;
+        h1 {
+          font-size: 40px;
+          line-height: 48px;
+          margin-bottom: 25px;
+        }
+        h4,
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+    .talk {
+      top: 2550px;
+    }
+    .footer {
+      top: 2814px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // contact-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .contact-html {
+    .wrapper1 {
+      width: 689px;
+      height: 711px;
+      flex-direction: column;
+      background: url('/assets/contact/tablet/bk-contact.png');
+      margin-bottom: 120px;
+      .text {
+        text-align: left;
+        margin-bottom: 36px;
+        padding-left: 58px;
+        padding-right: 80px;
+        h1 {
+          font-weight: 500;
+          font-size: 48px;
+          line-height: 48px;
+          color: #ffffff;
+          margin-top: 70px;
+          text-transform: capitalize;
+          margin-bottom: 35px;
+        }
+        h5 {
+          padding: 0;
+          font-size: 16px;
+          line-height: 26px;
+          opacity: 0.8;
+        }
+      }
+      form {
+        width: 573px;
+        height: 401px;
+        display: flex;
+        flex-direction: column;
+        hr {
+          width: 570px;
+          margin: 7px 0 24px 0;
+        }
+        input {
+          height: 30px;
+          width: 570px;
+        }
+        textarea {
+          width: 570px;
+          height: 100px;
+          padding-top: 5px;
+        }
+        input,
+        textarea {
+          padding-left: 10px;
+          padding-right: 10px;
+          background: transparent;
+          line-height: normal;
+          &::placeholder {
+            font-family: 'Jost';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 26px;
+            color: #fff;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            justify-content: left;
+          }
+        }
+        .submit {
+          margin-top: -2px;
+          margin-left: 420px;
+          width: 152px;
+          height: 56px;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #333136;
+          background: #fff;
+          border-radius: 8px;
+        }
+      }
+    }
+    .images {
+      height: 1230px;
+    }
+    .footer {
+      top: 2336px;
+      height: 337px;
+      padding-top: 0;
+      .logo {
+        margin-top: 0px;
+      }
+      .container1 {
+        margin-top: 65px;
+      }
+      hr {
+        top: 145px;
+      }
+    }
+  }
+}
+//--------------------------------------
+//--------------------------------------
+//
+//          DESKTOP STYLES
+//
+//--------------------------------------
+//--------------------------------------
+
+@media screen and (min-width: 1440px) {
+  //--------------------------
+  // GENERAL STYLES
+  //-------------------------
+
+  .background-1 {
+    position: absolute;
+    margin-left: -400px;
+    width: 1006px;
+    height: 594px;
+    top: 475px;
+    z-index: -1;
+    background: #f1f3f5;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border-radius: 297px 297px 297px 0px;
+  }
+  .background-2 {
+    position: absolute;
+    width: 1006px;
+    height: 594px;
+    top: 1873px;
+    margin-right: -400px;
+    background: #f1f3f5;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border-radius: 297px 297px 297px 0px;
+    transform: rotate(-180deg);
+  }
+
+  .nav {
+    height: 155px;
+    width: 1440px;
+    .nav-content {
+      width: 1111px;
+      .nav-items {
+        margin-left: 540px;
+      }
+    }
+  }
+
+  .phone-error {
+    margin-left: 860px;
+    top: 334px;
+  }
+
+  .email-error {
+    margin-left: 915px;
+    top: 267px;
+  }
+
+  .error1 {
+    margin-left: 900px;
+    top: 200px;
+  }
+  .error2 {
+    margin-left: 900px;
+    top: 267px;
+  }
+  .error3 {
+    margin-left: 900px;
+    top: 334px;
+  }
+  .error4 {
+    margin-left: 900px;
+    top: 401px;
+  }
+
+  .success {
+    top: 550px;
+    margin-left: -160px;
+  }
+
+  .talk {
+    width: 1111px;
+    height: 292px;
+    top: 2327px;
+    background: url('/assets/home/desktop/talk-bk.png');
+    flex-direction: row;
+    text-align: left;
+    h1 {
+      margin-top: -30px;
+      padding: 0;
+      padding-left: 70px;
+      width: 400px;
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 15px;
+    }
+    h4 {
+      padding: 0;
+      padding-left: 70px;
+      width: 560px;
+    }
+    button {
+      margin-top: -65px;
+      margin-left: 280px;
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 393px;
+    top: 2547px;
+    flex-direction: column;
+    text-align: left;
+    .logo {
+      width: 202px;
+      margin: 0;
+      margin-right: 70px;
+    }
+    hr {
+      position: absolute;
+      width: 1111px;
+      top: 223px;
+      background: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.1;
+      height: 1px;
+      border: none;
+      margin-bottom: 32px;
+    }
+    .container1 {
+      width: 1111px;
+      margin-top: 130px;
+      margin-bottom: 60px;
+      .text {
+        margin-left: 425px;
+        h3 {
+          margin-left: 40px;
+        }
+      }
+    }
+    .container2 {
+      width: 1111px;
+      padding-left: 0px;
+      .text1 {
+        margin-bottom: 0;
+        margin-right: 205px;
+      }
+      .text2 {
+        margin-bottom: 0;
+        h5 {
+          font-weight: bold;
+        }
+      }
+    }
+    .social {
+      margin-left: 340px;
+      margin-top: 55px;
+      img {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // index-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .index-html {
+    .intro {
+      width: 1111px;
+      height: 640px;
+      border-radius: 15px;
+      background: url('/assets/home/desktop/bk-oval.png');
+      .bk-oval {
+        display: none;
+      }
+      .content {
+        text-align: left;
+        width: 540px;
+        height: 350px;
+        left: 96px;
+        top: 145px;
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin-bottom: -5px;
+        }
+        h5 {
+          width: 400px;
+          margin-left: -138px;
+        }
+        button {
+          margin-left: -385px;
+        }
+      }
+      img {
+        width: 400px;
+        margin-left: 667px;
+        top: 20px;
+      }
+    }
+    .boxes {
+      flex-direction: row;
+      width: 1112px;
+      height: 640px;
+      top: 955px;
+      .text {
+        width: 541px;
+        height: 100%;
+      }
+      .box {
+        width: 541px;
+      }
+      .container1 {
+        margin-right: 30px;
+        .web {
+          h2 {
+            margin-top: 273px;
+          }
+          height: 640px;
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('/assets/home/desktop/image-web-design-large.jpg');
+        }
+      }
+      .container2 {
+        .app {
+          h2 {
+            margin-top: 107px;
+          }
+          height: 308px;
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('/assets/home/desktop/image-app-design.jpg');
+          margin-bottom: 24px;
+        }
+        .graphic {
+          h2 {
+            margin-top: 107px;
+          }
+          height: 308px;
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('/assets/home/desktop/image-graphic-design.jpg');
+          margin-bottom: -30px;
+        }
+      }
+    }
+    .points {
+      width: 1110px;
+      height: 412px;
+      top: 1755px;
+      flex-direction: row;
+      justify-content: space-between;
+      img {
+        width: 202px;
+        margin-left: 62px;
+      }
+      h2 {
+        margin-top: 45px;
+        margin-bottom: 32px;
+      }
+      h4 {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #333136;
+      }
+      .container {
+        margin: 0 20px;
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+        .text {
+          margin-bottom: 10px;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // webdesign-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .webdesign-html {
+    .background-1 {
+      top: 281px;
+    }
+    .intro {
+      background: url('/assets/web-design/desktop/intro-bk-3.png');
+      width: 1111px;
+      height: 252px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content {
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+        }
+      }
+    }
+    .wrapper {
+      width: 1110px;
+      height: 988px;
+      top: 567px;
+      .box-container1,
+      .box-container2 {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .box {
+        width: 350px;
+        height: 478px;
+        flex-direction: column;
+      }
+      .text {
+        width: 350px;
+        height: 158px;
+        margin-top: -15px;
+      }
+      h3 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
+      h5 {
+        padding: 0px;
+      }
+      .img {
+        width: 350px;
+        height: 320px;
+      }
+    }
+    .projects {
+      flex-direction: row;
+      width: 1112px;
+      height: 308px;
+      top: 1715px;
+      .box {
+        width: 541px;
+        height: 308px;
+        .text {
+          width: 689px;
+          height: 310px;
+        }
+        h2 {
+          margin-top: 110px;
+          margin-right: 120px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+        }
+        .view {
+          margin-right: 110px;
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+      .app {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/desktop/image-app-design.jpg');
+        margin-right: 30px;
+      }
+      .graphic {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/desktop/image-graphic-design.jpg');
+        margin-top: 0;
+      }
+    }
+    .talk {
+      top: 2183px;
+    }
+    .footer {
+      top: 2403px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // appdesign-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .appdesign-html {
+    .background-1 {
+      top: 281px;
+    }
+    .intro {
+      background: url('/assets/web-design/desktop/intro-bk-3.png');
+      width: 1111px;
+      height: 252px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content {
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+        }
+      }
+    }
+    .wrapper {
+      width: 1110px;
+      height: 988px;
+      top: 567px;
+      .box-container1 {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .box-container2 {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 731px;
+      }
+      .box {
+        width: 350px;
+        height: 478px;
+        flex-direction: column;
+      }
+      .text {
+        width: 350px;
+        height: 158px;
+        margin-top: -15px;
+      }
+      h3 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
+      h5 {
+        padding: 0px;
+      }
+      .img {
+        width: 350px;
+        height: 320px;
+      }
+    }
+    .projects {
+      flex-direction: row;
+      width: 1112px;
+      height: 308px;
+      top: 1715px;
+      .box {
+        .text {
+          width: 541px;
+          height: 308px;
+        }
+        width: 541px;
+        height: 308px;
+        h2 {
+          margin-top: 110px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+        }
+        .view {
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+      .web {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/desktop/image-web-design-small.jpg');
+        margin-right: 30px;
+      }
+      .graphic {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/desktop/image-graphic-design.jpg');
+        margin-top: 0;
+      }
+    }
+    .talk {
+      top: 2183px;
+    }
+    .footer {
+      top: 2403px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // graphicdesign-html STYLES
+  //-------------------------
+  //--------------------------
+  .graphicdesign-html {
+    .background-1 {
+      top: 281px;
+    }
+    .background-2 {
+      display: none;
+    }
+    .intro {
+      background: url('/assets/web-design/desktop/intro-bk-3.png');
+      width: 1111px;
+      height: 252px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content {
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+        }
+      }
+    }
+    .wrapper {
+      width: 1110px;
+      height: 478px;
+      top: 567px;
+      .box-container1 {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .box-container2 {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 731px;
+      }
+      .box {
+        width: 350px;
+        height: 478px;
+        flex-direction: column;
+      }
+      .text {
+        width: 350px;
+        height: 158px;
+        margin-top: -15px;
+      }
+      h3 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
+      h5 {
+        padding: 0px;
+      }
+      .img {
+        width: 350px;
+        height: 320px;
+      }
+    }
+    .projects {
+      flex-direction: row;
+      width: 1112px;
+      height: 308px;
+      top: 1205px;
+      .box {
+        .text {
+          width: 541px;
+          height: 308px;
+        }
+        width: 541px;
+        height: 308px;
+        h2 {
+          margin-top: 110px;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+        }
+        .view {
+          img {
+            width: 6px;
+            height: 12px;
+          }
+        }
+      }
+      .web {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/desktop/image-web-design-small.jpg');
+        margin-top: 0;
+      }
+      .app {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('/assets/home/desktop/image-app-design.jpg');
+
+        margin-right: 30px;
+      }
+    }
+    .talk {
+      top: 1673px;
+    }
+    .footer {
+      top: 1893px;
+    }
+  }
+  //--------------------------
+  //--------------------------
+  // about-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .about-html {
+    .background-2 {
+      top: 2000px;
+    }
+    .wrapper1 {
+      width: 1111px;
+      height: 480px;
+      text-align: left;
+      display: flex;
+      flex-direction: row-reverse;
+      margin-bottom: 160px;
+      .about-img {
+        width: 476px;
+        height: 480px;
+        background: url('/assets/about/desktop/image-about-hero.jpg');
+      }
+      .text {
+        width: 635px;
+        height: 480px;
+        padding: 0 80px 0 95px;
+        background: url(/assets/about/desktop/bk-container1.png);
+        h1 {
+          font-size: 48px;
+          line-height: 48px;
+          margin-top: 135px;
+          margin-bottom: 30px;
+        }
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+          padding: 0;
+        }
+      }
+    }
+    .wrapper2 {
+      width: 1111px;
+      height: 640px;
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      background: url(/assets/about/desktop/deal-bk.png);
+      margin-bottom: 160px;
+      .talent-img {
+        width: 476px;
+        height: 640px;
+        background: url('/assets/about/desktop/image-world-class-talent.jpg');
+        background-size: cover;
+      }
+      .text {
+        width: 635px;
+        height: 640px;
+        padding: 0 95px;
+        h1 {
+          margin-top: 150px;
+          font-size: 40px;
+          line-height: 48px;
+        }
+        h4 {
+          font-size: 16px;
+          line-height: 26px;
+          padding: 0;
+        }
+      }
+    }
+    .images {
+      z-index: 10;
+      width: 980px;
+      height: 364px;
+      flex-direction: row;
+      margin-bottom: 160px;
+    }
+    .wrapper3 {
+      z-index: 10;
+      width: 1111px;
+      height: 640px;
+      flex-direction: row-reverse;
+      text-align: left;
+      margin-bottom: 160px;
+      background: url(/assets/about/desktop/deal-bk.png);
+      .real-img {
+        width: 476px;
+        height: 640px;
+        background: url('/assets/about/desktop/image-real-deal.jpg');
+        background-size: cover;
+      }
+      .text {
+        width: 634px;
+        height: 640px;
+        padding: 0 95px;
+        h2 {
+          margin-top: 150px;
+          margin-bottom: 25px;
+          font-size: 40px;
+          line-height: 48px;
+        }
+        h5 {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 26px;
+          padding: 0;
+        }
+      }
+    }
+    .talk {
+      top: 2919px;
+    }
+    .footer {
+      top: 3139px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // locations-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .locations-html {
+    .background-2 {
+      display: none;
+    }
+    .wrapper-maps {
+      width: 1110px;
+      height: 1042px;
+      .box1,
+      .box2 {
+        display: flex;
+        flex-direction: row;
+        width: 1110px;
+        height: 326px;
+      }
+      .box1 {
+        flex-direction: row-reverse;
+      }
+      .map {
+        width: 350px;
+        height: 326px;
+      }
+      .text {
+        padding-top: 85px;
+        padding-left: 95px;
+        width: 730px;
+        height: 326px;
+        background: url('/assets/locations/mobile/bk-map.svg');
+        h1 {
+          font-size: 40px;
+          line-height: 48px;
+          margin-bottom: 25px;
+        }
+        h4,
+        h5 {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+    .talk {
+      top: 1357px;
+    }
+    .footer {
+      top: 1577px;
+    }
+  }
+
+  //--------------------------
+  //--------------------------
+  // contact-html STYLES
+  //-------------------------
+  //--------------------------
+
+  .contact-html {
+    .background-2 {
+      display: none;
+    }
+    .background-1 {
+      top: 885px;
+      margin-left: 434px;
+    }
+    .wrapper1 {
+      width: 1111px;
+      height: 480px;
+      flex-direction: row;
+      background: url('/assets/contact/desktop/bk-contact.png');
+      margin-bottom: 160px;
+      .text {
+        width: 610px;
+        height: 210px;
+        margin-bottom: 0;
+        padding-left: 95px;
+        padding-right: 70px;
+        h1 {
+          margin-top: 0px;
+          margin-bottom: 30px;
+        }
+      }
+      form {
+        width: 420px;
+        height: 400px;
+        hr {
+          width: 377px;
+        }
+        input {
+          height: 35px;
+          width: 365px;
+        }
+        textarea {
+          width: 365px;
+        }
+        .submit {
+          margin-top: -2px;
+          margin-left: 240px;
+          width: 152px;
+          height: 56px;
+        }
+      }
+    }
+    .images {
+      width: 960px;
+      height: 364px;
+      flex-direction: row;
+    }
+    .footer {
+      top: 1319px;
+      height: 321px;
+    }
+  }
+}
