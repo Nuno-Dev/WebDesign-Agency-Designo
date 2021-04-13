@@ -5,7 +5,7 @@ Hi! This is a fully functional responsive website for a fictional WebDesign comp
 
 In this project I used Leaflet.js, SASS, e-mail and form validation aswell as Flexbox and a lot of exciting stuff. Hope you enjoy it!
 
-Link: https://web-design-agency-designo-7b771kaeh-nuno-dev.vercel.app/
+Link: <a target="_blank">https://web-design-agency-designo-7b771kaeh-nuno-dev.vercel.app/</a>
 
 # Previews:
 
